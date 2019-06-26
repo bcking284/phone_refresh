@@ -38,7 +38,7 @@ def ipcheck(ip_list):
 
     for ip in clean_ip_list:
         splitip = ip.split('.')
-        locator = int(splitip[3])
+        locator = int(splitip[2])
         if locator in Key:
             location_list.append(Key[locator])
         else: location_list.append("Unknown")
