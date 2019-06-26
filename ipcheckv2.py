@@ -8,6 +8,7 @@ def ipcheck(ip_list, Key):
         locator = int(splitip[3])
         if locator in Key:
             location_list.append(Key[locator])
+        else: location_list.append("Unknown")
 
     return location_list
 
