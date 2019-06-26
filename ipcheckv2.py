@@ -1,3 +1,4 @@
+
 def ipcheck(ip_list):
 
     Key = {
@@ -32,10 +33,10 @@ def ipcheck(ip_list):
     177: 'Tuscaloosa, AL'
     }
 
-    ip_list = list(filter(lambda x: len(x) > 2, arr))
+    clean_ip_list = list(filter(lambda x: len(x) > 2, ip_list))
     location_list = []
 
-    for ip in ip_list:
+    for ip in clean_ip_list:
         splitip = ip.split('.')
         locator = int(splitip[3])
         if locator in Key:
@@ -43,8 +44,6 @@ def ipcheck(ip_list):
         else: location_list.append("Unknown")
 
     return location_list
-
-
 
 
 
