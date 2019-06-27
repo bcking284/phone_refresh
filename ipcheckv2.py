@@ -45,6 +45,10 @@ def ipcheck(ip_list):
             location_list.append("Unknown")
         if locator in ip_dict.keys():
             location_list.append(ip_dict[locator])
+
+        locator = int(splitip[2])
+        if locator in Key:
+            location_list.append(Key[locator])
         else: location_list.append("Unknown")
 
     return Counter(location_list)
